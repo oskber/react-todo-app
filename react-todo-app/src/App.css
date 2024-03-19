@@ -123,16 +123,26 @@ small {
   display: flex;
 }
 
-.trashcan {
-  padding-left: 10px;
-  padding-top: 5px;
-  font-size: small;
-  color: rgb(185, 185, 185);
-  transition: color 0.2s ease;
+.todoList__deleteButton {
+  color: rgb(61, 61, 61);
+  text-indent: -1000px;
+  overflow: hidden;
+  position: relative;
+  border-width: 0;
+  background-color: transparent;
+  min-width: 20px;
+  margin-left: 10px;
+  cursor: pointer;
 }
 
-.trashcan:hover {
-  color: rgb(107, 107, 107);
+.todoList__deleteButton::before {
+  display: block;
+  content: '🗑';
+  font-size: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-indent: 0;
 }
 
 #addTodo {

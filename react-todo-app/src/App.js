@@ -65,9 +65,18 @@ function App() {
                   }}
                 >
                   <span>{item.label}</span>
-                  <span className="trashcan">
-                    <i className="fa-solid fa-trash-can"></i>
-                  </span>
+                  <button
+                    className="todoList__deleteButton"
+                    onClick={(event) => {
+                      event.stopPropagation(); // prevent the click event from bubbling up to the li
+                      const updatedItems = items.filter((_, itemIndex) => {
+                        return itemIndex !== index;
+                      });
+                      setItems(updatedItems);
+                    }}
+                  >
+                    Delete
+                  </button>
                 </li>
               );
             })}
