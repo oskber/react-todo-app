@@ -68,7 +68,7 @@ function App() {
                   <button
                     className="todoList__deleteButton"
                     onClick={(event) => {
-                      event.stopPropagation(); // prevent the click event from bubbling up to the li
+                      event.stopPropagation();
                       const updatedItems = items.filter((_, itemIndex) => {
                         return itemIndex !== index;
                       });
