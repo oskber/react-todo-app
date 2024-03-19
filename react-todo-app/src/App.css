@@ -1,0 +1,206 @@
+* {
+  margin: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+  background: rgb(253, 239, 238);
+  background: linear-gradient(
+    180deg,
+    rgb(254, 208, 205) 0%,
+    rgb(252, 126, 117) 100%
+  );
+  min-height: 100vh;
+  background-repeat: no-repeat;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+  margin: 10px;
+
+  animation: fadeIn 0.5s ease;
+  animation-delay: 0.6s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+
+  animation: fadeIn 0.5s ease;
+  animation-delay: 0.7s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+input {
+  border-radius: 3px;
+  border: 1px solid rgb(183, 183, 183);
+  padding: 3px;
+  width: 180px;
+  font-size: 16px;
+
+  animation: fadeIn 0.5s ease;
+  animation-delay: 0.8s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+input:focus {
+  outline: none;
+  border: 2px solid rgb(18, 81, 255);
+}
+
+ul {
+  margin: 25px;
+  padding: 0;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  list-style-type: none;
+}
+
+li {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+  cursor: pointer;
+  animation: fadeUp 0.3s ease;
+}
+
+li span {
+  transition: color 0.5s ease;
+}
+
+small {
+  float: right;
+  padding-right: 45px;
+  padding-top: 3px;
+  color: rgb(209, 0, 0);
+  font-style: italic;
+  font-size: 12px;
+  font-weight: 500;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.failedInput {
+  animation: blink 0.4s ease-in-out;
+  animation-iteration-count: 3;
+  animation-play-state: running;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: grey;
+}
+
+.container {
+  min-width: 400px;
+  height: fit-content;
+  padding-bottom: 20px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  box-shadow: rgba(77, 81, 84, 0.2) 0px 8px 24px;
+
+  animation: dropDown 0.6s cubic-bezier(0.83, 0, 0.17, 1);
+}
+
+.todo-container {
+  justify-content: center;
+}
+
+.input {
+  display: flex;
+}
+
+.trashcan {
+  padding-left: 10px;
+  padding-top: 5px;
+  font-size: small;
+  color: rgb(185, 185, 185);
+  transition: color 0.2s ease;
+}
+
+.trashcan:hover {
+  color: rgb(107, 107, 107);
+}
+
+#addTodo {
+  width: 40px;
+  height: 28px;
+  border-radius: 3px;
+  border: 1px solid rgb(183, 183, 183);
+  font-weight: 500;
+  font-size: 16px;
+  margin-left: 5px;
+
+  animation: fadeIn 0.5s ease;
+  animation-delay: 0.7s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+#addTodo:hover {
+  background-color: rgb(200, 200, 200);
+}
+
+/* ANIMATION FOR CONTAINER */
+
+@keyframes dropDown {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(70px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* ANIMATION FOR TEXT IN CONTAINER */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ANIMATION FOR LIST ITEMS */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ANIMATION FOR INPUT ERROR */
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
