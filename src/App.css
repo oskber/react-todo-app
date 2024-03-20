@@ -16,6 +16,10 @@ body {
   background-repeat: no-repeat;
 }
 
+.container {
+  border-radius: 10px;
+}
+
 h1 {
   display: flex;
   justify-content: center;

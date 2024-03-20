@@ -11,7 +11,7 @@ function App() {
     <div className="App">
       <div className="container">
         <div className="todo-container">
-          <h1>My ToDo</h1>
+          <h1>todo</h1>
           <p>{`${completed} completed`}</p>
           <div className="input">
             <form
